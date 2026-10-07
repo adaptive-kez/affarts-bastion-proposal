@@ -120,8 +120,9 @@
 .v3.bastion .rankings{min-height:0;border-top-width:64px;padding-top:48px;padding-bottom:64px}
 .v3.bastion .rankings .section-head{margin-bottom:36px}
 .v3.bastion .rank-card{width:clamp(280px,28vw,384px);min-height:0;padding:20px}
-.v3.bastion .rank-card h3{font-size:28px}
-.v3.bastion .rank-card p{min-height:48px;margin-top:12px}
+.v3.bastion .rank-card h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;width:100%;font-size:28px}
+.v3.bastion .rank-card .rank-year{font:500 14px/1 Golos,sans-serif;color:#b3b3b3;letter-spacing:0}
+.v3.bastion .rank-card p{min-height:3.6em;margin-top:12px}
 .v3.bastion .rank-card .diploma-link{width:100%;margin-top:24px}
 .v3.bastion .rank-card .diploma-link img{width:100%;height:auto;max-height:none;margin:0}
 .v3.bastion .rankings .rail-counter{margin-top:32px}
