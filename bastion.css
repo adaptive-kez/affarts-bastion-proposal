@@ -113,6 +113,8 @@
 @media(max-width:999px){.bastion .header-wordmark img{width:148px}}
 
 /* Compact spacing and image proportions from the client review. */
+.v3.bastion .manifesto{min-height:0;padding:64px 24px 224px}
+.v3.bastion .manifesto .signature{width:240px;left:auto;right:48px;bottom:24px}
 .bastion .inline-cta{gap:8px;font-size:14px;line-height:1.2}
 .bastion .inline-cta .cta-avatar{display:block;width:32px;height:32px;flex:0 0 32px;aspect-ratio:1;object-fit:cover;object-position:center 36%;border-radius:50%}
 .v3.bastion .rankings{min-height:0;border-top-width:64px;padding-top:48px;padding-bottom:64px}
@@ -130,10 +132,12 @@
 .v3.bastion .solution-card h3{font-size:clamp(20px,1.9vw,28px);line-height:1.2;overflow-wrap:normal;word-break:normal;text-wrap:balance}
 .v3.bastion .contacts{padding-bottom:40px}
 .v3.bastion .footer-top{margin:0;padding:0;background:transparent;border:0}
-.v3.bastion .footer-top nav{justify-content:flex-start;gap:12px 28px}
+.v3.bastion .footer-top nav{justify-content:space-between;gap:12px 28px}
 .v3.bastion .footer-top nav a{border:0;border-radius:0;padding:4px 0}
 .v3.bastion .footer-bottom{margin-top:28px}
 @media(max-width:999px){
+ .v3.bastion .manifesto{padding:48px 16px 164px}
+ .v3.bastion .manifesto .signature{width:160px;right:24px;bottom:20px}
  .bastion .inline-cta{font-size:12px}
  .v3.bastion .case-top-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 16px}
  .v3.bastion .case-top-grid .case:nth-child(n){grid-column:auto;align-self:end}
