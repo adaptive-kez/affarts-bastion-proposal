@@ -135,6 +135,8 @@
 .v3.bastion .footer-top nav{justify-content:space-between;gap:12px 28px}
 .v3.bastion .footer-top nav a{border:0;border-radius:0;padding:4px 0}
 .v3.bastion .footer-bottom{margin-top:28px}
+.v3.bastion .review+.review{margin-top:64px}
+.v3.bastion .review figcaption>.review-avatar{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;margin:0;border-radius:50%;background:#1e1e1e;color:#fff;font:700 16px/1 Golos,sans-serif}
 @media(max-width:999px){
  .v3.bastion .manifesto{padding:48px 16px 164px}
  .v3.bastion .manifesto .signature{width:160px;right:24px;bottom:20px}
