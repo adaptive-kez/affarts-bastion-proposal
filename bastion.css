@@ -95,3 +95,14 @@
 .v3.bastion :is(h1,h2,h3,h4),.v3.bastion .scope-title{font-family:var(--font-display);font-weight:800;overflow-wrap:break-word}
 .v3.bastion :is(.package-price,.detail-total strong,.scope-price,.package-costs dd,.project-stats strong,.step-index,.scope-number){font-family:var(--font-numeric);font-variant-numeric:lining-nums tabular-nums}
 @media(max-width:359px){.v3.bastion .package-card h3{font-size:24px}}
+
+.bastion .header-wordmark img{display:block;width:197px;height:auto}
+.bastion .welcome-brand>p{margin-top:0}
+.bastion .case-top-grid .case{display:flex;flex-direction:column}
+.bastion .case-top-grid .case img{margin-top:auto}
+.bastion a.dp-card{display:block;text-decoration:none;color:inherit;transition:box-shadow .2s ease}
+.bastion a.dp-card:hover{box-shadow:inset 0 0 0 2px #e70204}
+.bastion a.dp-card:focus-visible{outline:3px solid #e70204;outline-offset:3px}
+.bastion .team-portrait-ceo{object-position:center 36%}
+.bastion .contact-portrait,.bastion .cta-avatar{object-position:center 36%}
+@media(max-width:999px){.bastion .header-wordmark img{width:148px}}
