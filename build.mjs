@@ -1,6 +1,7 @@
 import {readFileSync,writeFileSync,cpSync,mkdirSync,rmSync} from 'node:fs';
 import {resolve,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
 const root=dirname(fileURLToPath(import.meta.url));
 const data=JSON.parse(readFileSync(resolve(root,'proposal-data.json'),'utf8'));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -21,6 +22,8 @@ const panels=data.packages.map((p,i)=>`<section class="package-panel" id="panel-
  <div class="selected-package-footer"><p>Два консолидированных раунда правок на этап в рамках утверждённого направления.</p><a class="button" href="#contacts" data-discuss-package="${esc(p.name)}">Обсудить ${p.name.toLowerCase()} пакет ↗</a></div>
 </section>`).join('');
 let html=readFileSync(resolve(root,'index.template.html'),'utf8').replace('{{PACKAGE_CARDS}}',cards).replace('{{PACKAGE_PANELS}}',panels);
+const styleVersion=createHash('sha256').update(readFileSync(resolve(root,'bastion.css'))).digest('hex').slice(0,12);
+html=html.replace('href="bastion.css"',`href="bastion.css?v=${styleVersion}"`);
 if(/\{\{[A-Z_]+\}\}/.test(html))throw new Error('Остались незаполненные поля');
 writeFileSync(resolve(root,'index.html'),html);
 const dist=resolve(root,'dist');rmSync(dist,{recursive:true,force:true});mkdirSync(dist,{recursive:true});
